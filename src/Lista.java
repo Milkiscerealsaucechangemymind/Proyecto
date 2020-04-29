@@ -21,6 +21,16 @@ public class Lista {
     public void setCola(Nodo cola) {
         this.cola = cola;
     }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+    
+    
     
     public void pushFront(Enemigo enemigo){
         Nodo nodo=new Nodo(enemigo);
@@ -115,6 +125,30 @@ public class Lista {
        size++;
    }
     
+    public Nodo getN(int n){
+        Nodo temp=new Nodo();
+        temp=this.cabeza;
+        for(int i=0;i<n;i++){
+            temp=temp.getNext();
+        }
+        return temp;
+    }
+    
+   public void addAtK(int k,Enemigo e){
+       Nodo t=new Nodo();
+       t=this.getN(k-1);
+       this.addAfter(t,e);
+    }
+   
+   public void removeAtK(int k){
+       Nodo t=new Nodo();
+       Enemigo e=new Enemigo();
+       
+       t=this.getN(k);
+       e=t.getDato();
+       this.eraseKey(e);
+   }
+    
     public boolean isEmpty(){
         if(this.cabeza==null&&this.cola==null){
             return true;
@@ -153,6 +187,17 @@ public class Lista {
             size--;
         }
         
+    }
+    
+    
+    
+    public Enemigo getEnemigo(int n){
+        Nodo temp=new Nodo();
+        temp=this.cabeza;
+        for(int i=0;i<n;i++){
+            temp=temp.getNext();
+        }
+        return temp.getDato();
     }
     
 }
