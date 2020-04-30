@@ -78,9 +78,9 @@ public class Main {
             s.close();
 
             //Hacer pruebas de agregar/borrar
-            Enemigo f=new Enemigo("Jugo de Naranja",200,400,7);
-            Enemigos.pushBack(f);
-            
+            //Enemigo f=new Enemigo("Jugo de Naranja",200,400,7);
+            //Enemigos.removeAtK(Enemigos.getN((Enemigos.getSize()/2)));
+            //Enemigos.getEnemigoXNombre("");
             
             //////////////////////////////////
              

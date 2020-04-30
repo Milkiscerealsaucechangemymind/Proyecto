@@ -140,13 +140,9 @@ public class Lista {
        this.addAfter(t,e);
     }
    
-   public void removeAtK(int k){
-       Nodo t=new Nodo();
-       Enemigo e=new Enemigo();
-       
-       t=this.getN(k);
-       e=t.getDato();
-       this.eraseKey(e);
+   public void removeAtK(Nodo n){
+       n.setNext(n.getNext().getNext());
+       size--;
    }
     
     public boolean isEmpty(){
