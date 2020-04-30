@@ -200,4 +200,28 @@ public class Lista {
         return temp.getDato();
     }
     
+    public Enemigo getEnemigoXNombre(String nombre){
+        Nodo e=new Nodo();
+        e=this.cabeza;
+        while(e.getNext()!=null){
+            if(e.getDato().getNombre()==nombre){
+                return e.getDato();            
+            }
+            e=e.getNext();      
+        }
+        return null;
+    }
+    
+    public Enemigo getEnemigoXVida(int vida){
+        Nodo e=new Nodo();
+        e=this.cabeza;
+        while(e.getNext()!=null){
+            if(e.getDato().getVida()==vida){
+                return e.getDato();            
+            }
+            e=e.getNext();      
+        }
+        return null;
+    }
+    
 }

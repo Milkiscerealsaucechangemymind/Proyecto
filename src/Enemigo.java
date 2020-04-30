@@ -49,6 +49,12 @@ public class Enemigo {
         this.defensa = defensa;
     }
     
+    public String mostrarDatos(){
+        String a;
+        a="Enemigo:\n"+"Nombre: "+this.nombre+"\n"+"Vida: "+this.vida+"\n"+"Ataque: "+this.ataque+"\n"+"Defensa: "+this.defensa;
+        return a;
+    }
+    
     
     
 }
